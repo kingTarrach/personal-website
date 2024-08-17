@@ -1,0 +1,6 @@
+
+Command to switch to newest node version
+
+node -v (Checks version)
+nvm install node (Install newest version)
+nvm use node (Use newest version)

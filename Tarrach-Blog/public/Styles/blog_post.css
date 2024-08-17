@@ -1,0 +1,125 @@
+
+
+  .blog-article p {
+    font-family: 'MyFont';
+    font-weight: normal;
+  }
+
+  .blog-title {
+    font-family: 'MyFont';
+    font-weight: normal;
+  }
+
+  .blog-date {
+    font-family: 'MyFont';
+    font-weight: normal;
+  }
+
+  h2 {
+    font-family: 'MyFont';
+    font-weight: normal;
+  }
+
+  .article-list li {
+    font-family: 'MyFont';
+    font-weight: normal;
+  }
+
+  .link-text {
+    font-family: 'My-Font';
+    font-weight: normal;
+    color: rgb(0, 0, 238);
+    text-decoration: underline;
+  }
+
+  .like-container {
+    margin-top: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: margin-left 0.3s;
+    margin-left: 20%;
+    padding-left: 3%;
+    position: fixed;
+  }
+
+  #sidebar.hidden ~ .like-container {
+    padding-left: 4%;
+    margin-left: 35px;
+  }
+
+  #heartIcon {
+    height: 32px;
+    cursor: pointer;
+  }
+
+  #likeCount {
+    margin-left: 12.75px;
+    margin-right: auto;
+    display: block;
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
+  .true-centered-content {
+    text-align: center;  /* Centers text */
+    margin-left: 20%;
+    flex: 1;
+    margin-bottom: 100px;
+    padding-right: auto;
+    width: 60%;         /* Adjust width as needed */
+    box-sizing: border-box;
+  }
+
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;  /* Centers text */
+    flex-direction: column;
+    padding-left: 8%;
+    flex: 1;
+    margin-left: 20%;
+    margin-bottom: 100px;
+    padding-right: auto;
+    width: 72%;         /* Adjust width as needed */
+    box-sizing: border-box;
+    transition: margin-left 0.3s, width 0.3s;
+  }
+
+  .centered-content > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  #sidebar.hidden ~ .centered-content {
+    margin-left: 35px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: calc(100% - 35px);
+  } 
+
+  .blog-header {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-title {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+    font-size: 50px;
+  }
+
+  .blog-date {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+
+  .blog-article {
+    margin-bottom: 100px;
+    font-size: 19px;
+  }

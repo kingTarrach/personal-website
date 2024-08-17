@@ -1,0 +1,81 @@
+
+
+
+.all-articles {
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    text-decoration: underline;
+}
+
+.article-list-centered-content {
+    text-align: center;  /* Centers text */
+    margin-left: 7.5%;
+    margin-right: auto;
+    flex: 1;
+    margin-bottom: 100px;
+    padding-right: auto;
+    width: 85%;         /* Adjust width as needed */
+    box-sizing: border-box;
+}
+
+.article-list {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.articles-list > .article:last-child {
+    border-bottom: none; /* Removes the border from the last article */
+}
+
+.article-title, .article-content {
+    font-family: 'MyFont';
+    font-weight: normal;
+    margin: 0;
+}
+
+.article-title {
+    flex: 0 0 auto;
+    min-width: max-content;
+    margin: 0 10px 0 0;
+    white-space: nowrap;
+}
+
+.article-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.article-link {
+    margin-right: 5%;
+    margin-left: 5%;
+    font-family: 'My-Font';
+    font-weight: normal;
+    color: rgb(0, 0, 238);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #f4f4f4;
+}

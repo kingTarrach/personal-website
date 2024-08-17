@@ -1,0 +1,116 @@
+
+@font-face {
+    font-family: 'My-Font';
+    src: url('/Fonts/IBMPlexSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'My-Font';
+    src: url('/Fonts/IBMPlexSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'My-Font';
+    src: url('/Fonts/IBMPlexSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Logo-Font';
+    src: url('/Fonts/Oswald-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Logo-Font';
+    src: url('/Fonts/Oswald-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  h1 {
+      font-size: 50px;
+      font-family: 'My-Font';
+      font-weight: bold;
+  }
+
+  p {
+      font-family: 'My-Font';
+      font-weight: normal;
+  }
+
+  .top-content {
+    margin-top: 80px;
+  }
+
+  
+.footer {
+  background-color: #333;
+  z-index: 250;
+  padding: 40px 10%;
+  width: 100%;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.true-center {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+.footer-links, .footer-social-media-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 1em;
+  display: flex;
+}
+
+.footer-links li, .footer-social-media-links li {
+  margin: 0 10px;
+}
+
+.footer-links a, .footer-social-media-links a {
+  text-decoration: none;
+  color: #b3b3b3;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover, .footer-social-media-links a:hover {
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+.footer-links img, .footer-social-media-links img {
+  padding: 0px;
+  margin: 0px;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.footer-links img:hover, .footer-social-media-links img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  margin-top: 0px;
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+

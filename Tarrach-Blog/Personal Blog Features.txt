@@ -1,0 +1,17 @@
+Features of my personal blog website:
+
+Responsive design: Can fit a phone screen and a computer screen
+Navigation: Categories, search bar within categories
+Blog posts: Tags, title, date, author name, category
+Comment section: Integrate third party system like Disqus
+Social media integration: Add social media buttons
+About page: Include an about me page
+Contact form: Include personal information on how to reach
+Security features: Protect from spam and hacking
+
+Later design features (optional):
+Subscription options
+SEO
+Analytics
+Loading speed optimization
+

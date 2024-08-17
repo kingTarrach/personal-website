@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="/Styles/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a href="http://localhost:3000/" class="navbar-logo">Austin Tarrach</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto nav-links">
+          <li class="nav-item"><a class="nav-link" href="/blog_homepage">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about-page.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact-page.html">Contact</a></li>
+        </ul>
+        <ul class="navbar-nav header-social-media-links">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="socialMediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Connect
+            </a>
+            <div class="dropdown-menu" aria-labelledby="socialMediaDropdown">
+              <a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/austin-tarrach/">LinkedIn</a>
+              <a class="dropdown-item" target="_blank" href="https://github.com/kingTarrach">GitHub</a>
+              <a class="dropdown-item" target="_blank" href="https://www.facebook.com/austin.tarrach">Facebook</a>
+              <a class="dropdown-item" target="_blank" href="https://www.instagram.com/austintarrach/">Instagram</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary" href="/users/login" role="button">Sign In/Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <% if (errors && errors.length > 0) { %>
+      <div class="alert alert-danger">
+        <ul>
+          <% errors.forEach(function(error) { %>
+            <li><%= error.msg %></li>
+          <% }); %>
+        </ul>
+      </div>
+    <% } %>
+    
+    <h1 class="top-header">Register</h1>
+    
+      <form action="/users/register" method="POST">
+        <div class="register-box">
+          <p class="above-text">Username</p>
+          <input class="textbox" type="text" id="username" name="name" placeholder="Enter Here" maxlength="30" required>
+          <p class="above-text">Email address</p>
+          <input class="textbox" type="text" id="email" name="email" placeholder="Enter Here" maxlength="60" required>
+          <p class="above-text">Create password</p>
+          <input class="textbox" type="password" id="password" name="password" placeholder="Enter Here" maxlength="30" required>
+          <p class="above-text">Retype password</p>
+          <input class="textbox" type="password" id="password2" name="password2" placeholder="Enter Here" maxlength="30" required>
+          <button type="submit" class="login-button">Register</button>
+        </div>
+      </form>
+      <a href="/users/login" class="bottom-button">
+        <span>Already have an Account? Login</span>
+      </a>
+
+      <footer class="footer">
+        <nav class="footer-nav">
+          <ul class="footer-links">
+            <li><a href="/homepage.html">Blog</a></li>
+            <li><a href="/about-page.html">About</a></li>
+            <li><a href="/contact-page.html">Contact</a></li>
+          </ul>
+          <ul class="footer-social-media-links">
+            <li><a target = "_blank" href="https://www.facebook.com/austin.tarrach"><img class="facebook-link" src="/Icons/Facebook_Logo_2023.png" alt="Facebook Logo"></a></li>
+            <li><a target = "_blank" href="https://www.instagram.com/austintarrach/"><img class="instagram-link" src="/Icons/Instagram_icon.png" alt="Instagram Logo"></a></li>
+            <li><a target = "_blank" href="https://www.linkedin.com/in/austin-tarrach/"><img class="linkedin-link" src="/Icons/linkedin_icon.png" alt="LinkedIn Logo"></a></li>
+            <li><a target = "_blank" href="https://github.com/kingTarrach"><img class="github-link" src="/Icons/github-icon.png" alt="GitHub Logo"></a></li>
+          </ul>
+        
+      </nav>
+      <div class="true-center">
+        <p>Copyright © Austin's Blog</p>
+      </div>
+    </footer>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

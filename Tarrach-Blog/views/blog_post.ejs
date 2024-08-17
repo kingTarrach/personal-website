@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %></title>
+    <meta name="description" content="Brief description of the blog post that will show up in search engine results.">
+    <link rel="stylesheet" href="/Styles/blog_post.css">
+    <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
+    <link rel="stylesheet" href="/Styles/sidebar.css">
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="/Styles/comments.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a href="http://localhost:3000/" class="navbar-logo">Austin Tarrach</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto nav-links">
+        <li class="nav-item"><a class="nav-link" href="/blog_homepage">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about-page.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact-page.html">Contact</a></li>
+      </ul>
+      <ul class="navbar-nav header-social-media-links">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="socialMediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Connect
+          </a>
+          <div class="dropdown-menu" aria-labelledby="socialMediaDropdown">
+            <a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/austin-tarrach/">LinkedIn</a>
+            <a class="dropdown-item" target="_blank" href="https://github.com/kingTarrach">GitHub</a>
+            <a class="dropdown-item" target="_blank" href="https://www.facebook.com/austin.tarrach">Facebook</a>
+            <a class="dropdown-item" target="_blank" href="https://www.instagram.com/austintarrach/">Instagram</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary" href="/users/login" role="button">Sign In/Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <aside id='sidebar'>
+      <button id="toggleSidebar" class="toggle-sidebar-button">
+        <img src="/Icons/hamburger-icon.png" alt="Toggle Sidebar">
+      </button>
+      <h2>Latest Articles</h2>
+      <ul id="articlesList" class="article-list">
+        <% articles.forEach(function(article) { %>
+          <li><a href="<%= article._id %>"><%= article.title %></a></li>
+        <% }); %>
+      </ul>
+      
+    </aside>
+
+    <div class="like-container" id="likeButton">
+      <img id="heartIcon" src="/Icons/Empty_Heart.jpg" alt="Like">
+      <span id="likeCount">0</span>
+    </div>
+
+    <div id="mainContent" class="centered-content top-content">
+      <header class="blog-header">
+          <h1 class="blog-title"><%= post.title %></h1>
+          <p class="blog-date">Posted on: <%= post.date %></p>
+      </header>
+      
+      <article class="blog-article">
+        <p><%= post.content %></p>
+      </article>
+
+      <section id="comments">
+        <!-- Comment Form -->
+        <h2>Leave a comment down below!</h2>
+        <form action="/articles/<%= post._id %>/comments" method="POST" class="comment-form">
+          <div class="name-prompt" id="namePrompt">
+            <label for="commenterName">Your name:</label>
+            <input type="text" id="commenterName" name="commenterName" value="Anonymous" maxlength="50">
+          </div>
+          <div>
+            <textarea id="commentText" name="commentText" placeholder="Write something, anything!" required maxLength="500"></textarea>
+          </div>
+          <button class="submit-button" type="submit">Post</button>
+        </form>
+
+
+        <h2 class="comment-header">Comments</h2>
+        <ul class="comment-section">
+          <% comments.forEach(function(comment) { %>
+            <li class="comment">
+              <strong><%= comment.name %>:</strong> <p class="comment-text"><%= comment.comment %></p>
+              <small><%= comment.timestamp.toDateString() %></small>
+            </li>
+          <% }); %>
+        </ul>
+      </section>
+  
+    
+
+    </div>
+    <footer class="footer">
+      <nav class="footer-nav">
+        <ul class="footer-links">
+          <li><a href="/homepage.html">Blog</a></li>
+          <li><a href="/about-page.html">About</a></li>
+          <li><a href="/contact-page.html">Contact</a></li>
+        </ul>
+        <ul class="footer-social-media-links">
+          <li><a target = "_blank" href="https://www.facebook.com/austin.tarrach"><img class="facebook-link" src="/Icons/Facebook_Logo_2023.png" alt="Facebook Logo"></a></li>
+          <li><a target = "_blank" href="https://www.instagram.com/austintarrach/"><img class="instagram-link" src="/Icons/Instagram_icon.png" alt="Instagram Logo"></a></li>
+          <li><a target = "_blank" href="https://www.linkedin.com/in/austin-tarrach/"><img class="linkedin-link" src="/Icons/linkedin_icon.png" alt="LinkedIn Logo"></a></li>
+          <li><a target = "_blank" href="https://github.com/kingTarrach"><img class="github-link" src="/Icons/github-icon.png" alt="GitHub Logo"></a></li>
+        </ul>
+      
+    </nav>
+    <div class="true-center">
+      <p>Copyright © Austin's Blog</p>
+    </div>
+  </footer>
+  
+  <script src="/scripts/client.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+.navbar-logo {
+  font-family: "Logo-Font";
+  font-size: 40px;
+  margin: 0px;
+  margin-left: 10px;
+  padding-bottom: 3px;
+  color:rgb(255, 211, 108);
+  cursor: pointer;
+  text-shadow: 3px 5px 0px rgba(0,0,0,0.2);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar-logo:hover {
+  text-decoration: none;
+  text-shadow: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0px 10px;
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it sits on top of other content */
+    box-sizing: border-box;
+    
+  } 
+
+  @media (max-width: 600px) {
+    .navbar {
+        padding: 10px 5px;
+    }
+    .nav-links li, .header-social-media-links li {
+        padding: 0 5px;
+        font-size: 14px;
+    }
+}
+
+  .nav-links, .header-social-media-links {
+    padding-left: 10px;
+    margin-left: 20px;
+    list-style: none;
+    display: flex;
+    padding-right: 10px;
+  }
+  
+  .nav-links li, .header-social-media-links li {
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+
+  .header-social-media-links img {
+    transition: transform 0.3s;
+  }
+
+  .header-social-media-links img:hover {
+    transform: scale(1.1);
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  
+
+  .facebook-link {
+    padding-left: 10px;
+    height: 40px;
+  }
+
+  .instagram-link {
+    height: 40px;
+    padding-left: 10px;
+  }
+
+  .linkedin-link {
+    height: 40px;
+    padding-left: 10px;
+    background: none;
+  }
+  
+  .github-link {
+    height: 40px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 3px;
+  }
+

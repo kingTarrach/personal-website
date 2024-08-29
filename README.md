@@ -1,9 +1,7 @@
 # Personal Portfolio and Blog
-
 This is the repository for my personal portfolio and blog, designed to showcase my web development skills, professional projects, and thought leadership through blog posts. The website demonstrates my ability to create responsive, user-centric designs using modern web technologies.
 
 ## Purpose
-
 This project was developed to demonstrate my expertise in full-stack web development, with a focus on creating intuitive, responsive user interfaces. It serves as a platform to display my work, share my insights on various topics, and provide a professional presence online.
 
 ## Key Features and Skills Demonstrated
@@ -21,7 +19,11 @@ This project was developed to demonstrate my expertise in full-stack web develop
 - **Node.js:** For setting up the server and handling backend functionality.
 - **MongoDB:** Used as the database for storing blog posts, user information, and other dynamic content, chosen for its flexibility and scalability.
 
-## Challenges and Learnings
+## Working screenshots
+- https://github.com/user-attachments/assets/ec89e1b9-6da7-447d-b745-3d3159310877
+- https://github.com/user-attachments/assets/6cace06b-61e8-4823-bc43-51827e4a49a2
+- https://github.com/user-attachments/assets/96f3d063-6652-4bee-b168-a6d8528b28e6
 
+## Challenges and Learnings
 One of the main challenges was implementing a fully responsive design that adapts seamlessly across devices. Through this process, I enhanced my skills in CSS Grid and Flexbox. Additionally, I deepened my understanding of asynchronous JavaScript while integrating dynamic content into the blog section.
 

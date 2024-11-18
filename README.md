@@ -4,15 +4,26 @@ This is the repository for my personal portfolio and blog, designed to showcase 
 ## Purpose
 This project was developed to demonstrate my expertise in full-stack web development, with a focus on creating intuitive, responsive user interfaces. It serves as a platform to display my work, share my insights on various topics, and provide a professional presence online.
 
+## Key Features and Skills Demonstrated
+
+- **Responsive Design:** The site is fully responsive, ensuring optimal user experience across devices, showcasing my front-end development skills with HTML, CSS, and JavaScript.
+- **Blog Functionality:** A dynamic blog section built using JavaScript, allowing for the addition of posts with categories, tags, and comments.
+- **Portfolio Section:** A detailed portfolio page that includes descriptions of past projects, emphasizing my ability to manage and present complex data effectively.
+- **Comment and Like System:** Implemented a feature allowing users to comment on and like blog posts, enhancing user engagement and interaction.
+- **Backend Integration:** The site includes a basic Node.js server setup, demonstrating my understanding of server-side development and API integration.
+
 ## How to Use this Project
 
-Prerequisites:
+### Prerequisites:
 [Technology 1] Node.js v22.7.0
+
 [Technology 2] MongoDB Atlas Account
+
 [Technology 3] npm (newest version)
 
 ### 1. Clone repository:
 git clone https://github.com/kingTarrach/personal-website.git
+
 cd personal-website
 
 ### 2. Install Dependecies:
@@ -27,6 +38,7 @@ npm install
 
 ### 4. Configure Enviornment Variables
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<database-name>?retryWrites=true&w=majority
+
 SESSION_SECRET=your_secret_key
 
 ### 5. Run the application
@@ -34,14 +46,6 @@ npm start
 
 ### 6. Access application
 http://localhost:3000
-
-## Key Features and Skills Demonstrated
-
-- **Responsive Design:** The site is fully responsive, ensuring optimal user experience across devices, showcasing my front-end development skills with HTML, CSS, and JavaScript.
-- **Blog Functionality:** A dynamic blog section built using JavaScript, allowing for the addition of posts with categories, tags, and comments.
-- **Portfolio Section:** A detailed portfolio page that includes descriptions of past projects, emphasizing my ability to manage and present complex data effectively.
-- **Comment and Like System:** Implemented a feature allowing users to comment on and like blog posts, enhancing user engagement and interaction.
-- **Backend Integration:** The site includes a basic Node.js server setup, demonstrating my understanding of server-side development and API integration.
 
 ## Technologies Used
 

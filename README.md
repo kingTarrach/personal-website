@@ -4,6 +4,21 @@ This is the repository for my personal portfolio and blog, designed to showcase 
 ## Purpose
 This project was developed to demonstrate my expertise in full-stack web development, with a focus on creating intuitive, responsive user interfaces. It serves as a platform to display my work, share my insights on various topics, and provide a professional presence online.
 
+## How to Use this Project
+Prerequisites:
+[Technology 1] Node.js v22.7.0
+[Technology 2] MongoDB Atlas Account
+[Technology 3] npm (newest version)
+
+Clone repository:
+git clone 
+# Set up MongoDB Atlas account
+1. Register/Sign in at mongodb.com/cloud/atlas.
+2. Create new cluster (Free tier)
+3. Add your IP address to the IP Whitelist in the Atlas Security tab to allow your application to access the database.
+4. Create a database and collection for the project (e.g., mtg_database and cards_collection).
+5. Retrieve the connection string from the Connect button in your MongoDB Atlas cluster dashboard.
+
 ## Key Features and Skills Demonstrated
 
 - **Responsive Design:** The site is fully responsive, ensuring optimal user experience across devices, showcasing my front-end development skills with HTML, CSS, and JavaScript.

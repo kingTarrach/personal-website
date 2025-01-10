@@ -263,7 +263,9 @@ app.post('/reply-comment', (req, res) => {
   res.json({ comments });
 });
 
-fetch("/api/articles", {
+// This will automatically use the current domain
+const baseUrl = window.location.origin; 
+fetch('${baseUrl}/api/articles', {
   method: "POST",
   headers: {
     "Content-Type": "application/json"

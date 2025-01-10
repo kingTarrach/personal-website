@@ -113,7 +113,26 @@ app.get('/admin/add-article', (req, res) => {
   res.render('add-article');  // Create add-article.ejs for the article form
 });
 
-// 4. Implementation for adding articles in routes/articles.js
+// 4. Route for adding articles
+router.post('/admin/add-article', async (req, res) => {
+  if (!req.session.isAuthenticated) {
+    req.flash('error_msg', 'Unauthorized access');
+    return res.redirect('/admin/login');
+  }
+
+  const { title, content } = req.body;
+
+  try {
+    const newArticle = new BlogPost({ title, content });
+    await newArticle.save();  // Save article to MongoDB
+    req.flash('success_msg', 'Article added successfully');
+    res.redirect('/articles');  // Redirect to articles list
+  } catch (error) {
+    console.error('Error adding article:', error);
+    req.flash('error_msg', 'Failed to add article');
+    res.redirect('/admin/add-article');
+  }
+});
 
 // 5. Admin Logout
 app.get('/admin/logout', (req, res) => {

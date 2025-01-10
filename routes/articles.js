@@ -3,26 +3,7 @@ const router = express.Router();
 const BlogPost = require('../models/blogPost');
 const Comment = require('../models/comments');
 
-// Route to add an article
-app.post('/admin/add-article', async (req, res) => {
-  if (!req.session.isAuthenticated) {
-    req.flash('error_msg', 'Unauthorized access');
-    return res.redirect('/admin/login');
-  }
 
-  const { title, content } = req.body;
-
-  try {
-    const newArticle = new BlogPost({ title, content });
-    await newArticle.save();  // Save article to MongoDB
-    req.flash('success_msg', 'Article added successfully');
-    res.redirect('/articles');  // Redirect to articles list
-  } catch (error) {
-    console.error('Error adding article:', error);
-    req.flash('error_msg', 'Failed to add article');
-    res.redirect('/admin/add-article');
-  }
-});
 
 // Get a BlogPost and its Comments
 router.get('/articles/:postId', async (req, res) => {

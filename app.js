@@ -114,7 +114,7 @@ app.get('/admin/add-article', (req, res) => {
 });
 
 // 4. Route for adding articles
-router.post('/admin/add-article', async (req, res) => {
+app.post('/admin/add-article', async (req, res) => {
   if (!req.session.isAuthenticated) {
     req.flash('error_msg', 'Unauthorized access');
     return res.redirect('/admin/login');

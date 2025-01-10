@@ -38,14 +38,14 @@
     flex-direction: column;
     align-items: center;
     transition: margin-left 0.3s;
-    margin-left: 20%;
+    margin-left: 25%;
     padding-left: 3%;
     position: fixed;
   }
 
   #sidebar.hidden ~ .like-container {
     padding-left: 4%;
-    margin-left: 35px;
+    margin-left: 16%;
   }
 
   #heartIcon {
@@ -78,10 +78,10 @@
     flex-direction: column;
     padding-left: 8%;
     flex: 1;
-    margin-left: 20%;
+    margin-left: 25%;
     margin-bottom: 100px;
     padding-right: auto;
-    width: 72%;         /* Adjust width as needed */
+    width: 60%;         /* Adjust width as needed */
     box-sizing: border-box;
     transition: margin-left 0.3s, width 0.3s;
   }
@@ -95,8 +95,8 @@
 
   #sidebar.hidden ~ .centered-content {
     margin-left: 35px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 23%;
+    padding-right: 23%;
     width: calc(100% - 35px);
   } 
 

@@ -8,6 +8,7 @@ const flash = require('connect-flash');
 const router = express.Router();
 const port = 3000;
 const mongoose = require('mongoose');
+const connectDB = require('./config/database');
 const BlogPost = require('./models/blogPost');
 const Comment = require('./models/comments');
 const app = express();
@@ -16,6 +17,7 @@ require('./config/passport')(passport);
 
 const articleRoutes = require('./routes/articles');
 const userRoutes = require('./routes/users');
+const dataRoutes = require('./routes/data');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -53,9 +55,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/users', userRoutes);
 app.use('/', articleRoutes);
+app.use('/data', dataRoutes);
 
 // Connect to mongo database
-mongoose.connect('mongodb://localhost:27017/mydatabase')
+MONGO_URI = process.env.MONGO_URI
+mongoose.connect(MONGO_URI)
 .then(() => console.log('MongoDB connected successfully'))
 .catch(err => console.error('MongoDB connection error:', err)); 
 
@@ -175,10 +179,15 @@ function auth(req, res, next) {
 }
 
 app.post('/api/articles', (req, res) => {
-  const newArticle = req.body;
-  newArticle.id = articles.length + 1;
-  articles.push(newArticle);
-  res.status(201).json(newArticle);
+  const { title, content } = req.body;
+
+  const newArticle = new Article({ title, content });
+
+  newArticle.save()
+    .then(article => {
+      res.status(201).json(article);
+    })
+    .catch(err => res.status(500).json({ error: 'Error saving article', details: err.message }));
 });
 
 app.get('/admin', auth, (req, res) => {
@@ -265,6 +274,21 @@ app.post('/reply-comment', (req, res) => {
   }
   res.json({ comments });
 });
+
+fetch("http://localhost:3000/api/articles", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    title: "Understanding MongoDB Connections",
+    content: "This article explains how to connect and interact with MongoDB from Node.js."
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log("Article added:", data))
+  .catch(error => console.error("Error:", error));
+
 
 
 app.listen(port, () => {

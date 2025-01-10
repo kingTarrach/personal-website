@@ -263,7 +263,7 @@ app.post('/reply-comment', (req, res) => {
   res.json({ comments });
 });
 
-fetch("http://localhost:3000/api/articles", {
+fetch("/api/articles", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
@@ -280,5 +280,5 @@ fetch("http://localhost:3000/api/articles", {
 
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}/blog_homepage`);
+  console.log("App up and running!");
 });

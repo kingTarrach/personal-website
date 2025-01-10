@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Express session
 app.use(session({
   secret: 'big14bitchyea', // This is a secret key to sign the session ID cookie.
-  resave: true, // Don't save session if unmodified
-  saveUninitialized: true, // Don't create session until something stored
+  resave: false, // Don't save session if unmodified
+  saveUninitialized: false, // Don't create session until something stored
   cookie: { secure: false } // True is recommended if your site is HTTPS only
 }));
 
@@ -79,6 +79,48 @@ db.on('close', function () {
 db.once('open', function() {
   console.log("mongodb running.")
 })
+
+
+// Following implementation is to be able to add an article
+const ADMIN_USERNAME = 'austindeantarrach';
+const ADMIN_PASSWORD = 'big14bitchyea';
+
+// 1. This renders the admin login page
+app.get('/admin/login', (req, res) => {
+  res.render('admin-login');  // Create admin-login.ejs for the form
+});
+
+// 2. This verifies the admin login and redirects if successful
+app.post('/admin/login', (req, res) => {
+  const { username, password } = req.body;
+
+  // Check if credentials match
+  if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+    req.session.isAuthenticated = true;  // Store authentication status in session
+    res.redirect('/admin/add-article');  // Redirect to article submission page
+  } else {
+    req.flash('error_msg', 'Invalid username or password');
+    res.redirect('/admin/login');
+  }
+});
+
+// 3. Add article route
+app.get('/admin/add-article', (req, res) => {
+  if (!req.session.isAuthenticated) {
+    req.flash('error_msg', 'You must be logged in to access this page');
+    return res.redirect('/admin/login');
+  }
+  res.render('add-article');  // Create add-article.ejs for the article form
+});
+
+// 4. Implementation for adding articles in routes/articles.js
+
+// 5. Admin Logout
+app.get('/admin/logout', (req, res) => {
+  req.session.destroy();  // Destroy session
+  res.redirect('/admin/login');
+});
+
 
 // Initialize articles and likes
 let likes = 0;

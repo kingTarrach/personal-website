@@ -178,18 +178,6 @@ function auth(req, res, next) {
   next();
 }
 
-app.post('/api/articles', (req, res) => {
-  const { title, content } = req.body;
-
-  const newArticle = new Article({ title, content });
-
-  newArticle.save()
-    .then(article => {
-      res.status(201).json(article);
-    })
-    .catch(err => res.status(500).json({ error: 'Error saving article', details: err.message }));
-});
-
 app.get('/admin', auth, (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'admin.html'));
 });

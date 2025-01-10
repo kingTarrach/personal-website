@@ -263,23 +263,6 @@ app.post('/reply-comment', (req, res) => {
   res.json({ comments });
 });
 
-// This will automatically use the current domain
-const baseUrl = window.location.origin; 
-fetch('${baseUrl}/api/articles', {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    title: "Understanding MongoDB Connections",
-    content: "This article explains how to connect and interact with MongoDB from Node.js."
-  })
-})
-  .then(response => response.json())
-  .then(data => console.log("Article added:", data))
-  .catch(error => console.error("Error:", error));
-
-
 
 app.listen(port, () => {
   console.log("App up and running!");

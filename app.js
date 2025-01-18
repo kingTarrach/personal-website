@@ -159,6 +159,16 @@ app.get('/blog_homepage', async (req, res) => {
   
 });
 
+app.get('/download', (req, res) => {
+  const filePath = path.join(__dirname, 'public/downloads/Stock_Market_Bar_Files.zip');
+  res.download(filePath, 'StockMarketBar.zip', (err) => {
+      if (err) {
+          console.error(err);
+          res.status(500).send('Error occurred while downloading the file.');
+      }
+  });
+});
+
 app.post('/blog_post/:postId', (req, res) => {
   const postId = req.params.postId;  // Capture the postId from URL
   const { name, comment } = req.body;  // Extract name and comment from the form data

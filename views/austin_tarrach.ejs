@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
     <title>Portfolio</title>
+
+    <!-- Meta description for SEO -->
     <meta name="description" content="Brief description of the blog post that will show up in search engine results.">
+
+    <!-- Linking CSS stylesheets -->
     <link rel="stylesheet" href="/Styles/blog_post.css">
     <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
     <link rel="stylesheet" href="/Styles/homepage.css">
     <link rel="stylesheet" href="/Styles/main.css">
     <link rel="stylesheet" href="/Styles/comments.css">
+
+    <!-- Linking JavaScript files -->
     <script defer src="/Scripts/client.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
+  <!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a href="/" class="navbar-logo">Austin Tarrach</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left side of navigation bar -->
       <ul class="navbar-nav mr-auto nav-links">
         <li class="nav-item"><a class="nav-link" href="/blog_homepage">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="/about-page.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact-page.html">Contact</a></li>
       </ul>
+      <!-- Right side of navigation bar -->
       <ul class="navbar-nav header-social-media-links">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="socialMediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Connect
           </a>
+          <!-- Social media links -->
           <div class="dropdown-menu" aria-labelledby="socialMediaDropdown">
             <a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/austin-tarrach/">LinkedIn</a>
             <a class="dropdown-item" target="_blank" href="https://github.com/kingTarrach">GitHub</a>
@@ -39,23 +51,26 @@
             <a class="dropdown-item" target="_blank" href="https://www.instagram.com/austintarrach/">Instagram</a>
           </div>
         </li>
+        <!-- Sign in/register button -->
         <li class="nav-item">
           <a class="btn btn-primary" href="/users/login" role="button">Sign In/Register</a>
         </li>
       </ul>
     </div>
   </nav>
-
+    <!-- Main content -->
     <div id="mainContent" class="homepage-centered-content top-content">
       <header class="title">
           <h1>Austin Tarrach's Portfolio</h1>
       </header>
-
+      <!-- Project 1 -->
+      <p>Welcome to my portfolio! Here you can find my blog and projects I have worked on. Feel free to explore!</p>
       <h2>Project 1: My Blog Website</h2>
+      <p>This blog website was created using Node.js, Express, and EJS. It is a full-stack application that allows users to create an account, write blog posts, and comment on other blog posts. The website is fully responsive and has a clean, modern design.</p>
       <a href="/blog_homepage" class="article-list-button">Go to Austin Tarrach's Blog</a>
 
+      <!-- Project 2 -->
       <h2>Project 2: Stock Market Bar Application</h2>
-      <p>Project description</p>
       <p>This application manages drink prices dynamically, treating them like stocks.
       Prices increase or decrease based on drink popularity, creating a fun and engaging bar experience.
       This application includes only the admin panel, designed specifically for the bar owner who has installed this software at their establishment.</p>
@@ -65,9 +80,9 @@
       <p>1. Press Download to download .zip file</p>
       <p>2. Extract Zip File</p>
       <p>3. Navigate to app.publish folder</p>
-      <p>4. Double click on UI Winforms Application file</p>
-      <p>5. Application should be up and running!</p>
+      <p>4. Double click on UI Winforms Application file to run it</p>
 
+    <!-- Footer Bar -->
     </div>
     <footer class="footer">
       <nav class="footer-nav">
@@ -83,6 +98,7 @@
           <li><a target = "_blank" href="https://github.com/kingTarrach"><img class="github-link" src="/Icons/github-icon.png" alt="GitHub Logo"></a></li>
         </ul>
       
+    <!-- Bottom Copyright -->
     </nav>
     <div class="true-center">
       <p>Copyright © Austin's Blog</p>

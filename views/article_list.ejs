@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
     <title>Blog</title>
+
+    <!-- Meta description for SEO -->
     <meta name="description" content="Brief description of the blog post that will show up in search engine results.">
+
+    <!-- Linking CSS stylesheets -->
     <link rel="stylesheet" href="/Styles/article_list.css">
     <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
     <link rel="stylesheet" href="/Styles/main.css">
     <link rel="stylesheet" href="/Styles/comments.css">
+
+    <!-- Linking JavaScript files -->
     <script defer src="/Scripts/client.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
+  <!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a href="/" class="navbar-logo">Austin Tarrach</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left side of naviagation bar-->
       <ul class="navbar-nav mr-auto nav-links">
         <li class="nav-item"><a class="nav-link" href="/blog_homepage">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="/about-page.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact-page.html">Contact</a></li>
       </ul>
+      <!-- Right side of naviagation bar -->
       <ul class="navbar-nav header-social-media-links">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="socialMediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -46,7 +57,7 @@
   </nav>
 
     <div id="mainContent" class="article-list-centered-content">
-
+      <!-- Main content (Article List) -->
       <h1 class="all-articles">All Articles</h1>
       <div class="articles-list">
           <% articles.forEach(function(article) { %>
@@ -68,6 +79,7 @@
       </nav>
 
     </div>
+    <!-- Footer -->
     <footer class="footer">
       <nav class="footer-nav">
         <ul class="footer-links">

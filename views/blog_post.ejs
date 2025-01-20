@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
     <title><%= post.title %></title>
+
+    <!-- Meta description for SEO -->
     <meta name="description" content="Brief description of the blog post that will show up in search engine results.">
+
+    <!-- Linking CSS stylesheets -->
     <link rel="stylesheet" href="/Styles/blog_post.css">
     <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
     <link rel="stylesheet" href="/Styles/sidebar.css">
     <link rel="stylesheet" href="/Styles/main.css">
     <link rel="stylesheet" href="/Styles/comments.css">
+
+    <!-- Linking JavaScript files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a href="/" class="navbar-logo">Austin Tarrach</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left side of navigation bar -->
       <ul class="navbar-nav mr-auto nav-links">
         <li class="nav-item"><a class="nav-link" href="/blog_homepage">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="/about-page.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="/contact-page.html">Contact</a></li>
       </ul>
+      <!-- Right side of navigation bar -->
       <ul class="navbar-nav header-social-media-links">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="socialMediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +58,7 @@
     </div>
   </nav>
 
-
+    <!-- Sidebar -->
     <aside id='sidebar'>
       <button id="toggleSidebar" class="toggle-sidebar-button">
         <img src="/Icons/hamburger-icon.png" alt="Toggle Sidebar">
@@ -64,6 +77,7 @@
       <span id="likeCount">0</span>
     </div>
 
+    <!-- Blog post -->
     <div id="mainContent" class="centered-content top-content">
       <header class="blog-header">
           <h1 class="blog-title"><%= post.title %></h1>
@@ -88,7 +102,7 @@
           <button class="submit-button" type="submit">Post</button>
         </form>
 
-
+        <!-- Comment Section -->
         <h2 class="comment-header">Comments</h2>
         <ul class="comment-section">
           <% comments.forEach(function(comment) { %>
@@ -99,9 +113,6 @@
           <% }); %>
         </ul>
       </section>
-  
-    
-
     </div>
     <footer class="footer">
       <nav class="footer-nav">

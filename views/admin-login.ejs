@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
     <title>Admin Login</title>
+
+    <!-- Linking CSS stylesheets -->
     <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
     <link rel="stylesheet" href="/Styles/main.css">
     <link rel="stylesheet" href="/Styles/register.css">
+
+    <!-- Linking JavaScript files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a href="/" class="navbar-logo">Austin Tarrach</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +57,7 @@
       <% } %>
     
     <h1 class="top-header">Admin Login</h1>
-    
+      <!-- Login POST Method -->
       <form action="/admin/login" method="POST">
         <div class="register-box">
           <p class="above-text">Admin Username</p>
@@ -63,7 +70,7 @@
       <a href="/users/register" class="bottom-button">
         <span>Don't have an account? Register</span>
       </a>
-
+      <!-- Footer -->
       <footer class="footer">
         <nav class="footer-nav">
           <ul class="footer-links">

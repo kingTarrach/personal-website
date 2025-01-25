@@ -58,6 +58,7 @@ html {
     justify-content: start;
     align-items: start;
     height: 100%;
+    max-width: 650px;
     padding: 0 0px;
     margin-left: 20%;
     margin-right: 2rem;
@@ -367,8 +368,8 @@ html {
 
 @media (max-width: 640px) {
     #top-screen .top-text {
-        margin-left: 1rem;
-        margin-right: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
   

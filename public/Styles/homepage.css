@@ -19,12 +19,12 @@
 
 .homepage-centered-content {
     text-align: center;  /* Centers text */
-    margin-left: 7.5%;
+    margin-left: 17.5%;
     margin-right: auto;
     flex: 1;
     margin-bottom: 100px;
     padding-right: auto;
-    width: 85%;         /* Adjust width as needed */
+    width: 65%;         /* Adjust width as needed */
     box-sizing: border-box;
 }
 

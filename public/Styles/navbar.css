@@ -12,8 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
+    background-color: #fbfbfb;
+    color: rgb(0, 0, 0);
     padding: 0px 10px;
     position: fixed; /* Fixed positioning relative to the viewport */
     top: 0;

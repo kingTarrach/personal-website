@@ -26,37 +26,7 @@
 <body>
 
   <!-- Navigation bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a href="/" class="navbar-logo">Austin Tarrach</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <!-- Left side of navigation bar -->
-      <ul class="navbar-nav mr-auto nav-links">
-        <li class="nav-item"><a class="nav-link" href="/blog_homepage">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about-page.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact-page.html">Contact</a></li>
-      </ul>
-      <!-- Right side of navigation bar -->
-      <ul class="navbar-nav header-social-media-links">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="socialMediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Connect
-          </a>
-          <div class="dropdown-menu" aria-labelledby="socialMediaDropdown">
-            <a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/austin-tarrach/">LinkedIn</a>
-            <a class="dropdown-item" target="_blank" href="https://github.com/kingTarrach">GitHub</a>
-            <a class="dropdown-item" target="_blank" href="https://www.facebook.com/austin.tarrach">Facebook</a>
-            <a class="dropdown-item" target="_blank" href="https://www.instagram.com/austintarrach/">Instagram</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary" href="/users/login" role="button">Sign In/Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <%- include('partials/navbar') %>
 
     <!-- Sidebar -->
     <aside id='sidebar'>
@@ -97,7 +67,7 @@
             <input type="text" id="commenterName" name="commenterName" value="Anonymous" maxlength="50">
           </div>
           <div>
-            <textarea id="commentText" name="commentText" placeholder="Write something, anything!" required maxLength="500"></textarea>
+            <textarea id="commentText" name="commentText" placeholder="What's on your mind?" required maxLength="500"></textarea>
           </div>
           <button class="submit-button" type="submit">Post</button>
         </form>
@@ -114,25 +84,8 @@
         </ul>
       </section>
     </div>
-    <footer class="footer">
-      <nav class="footer-nav">
-        <ul class="footer-links">
-          <li><a href="/homepage.html">Blog</a></li>
-          <li><a href="/about-page.html">About</a></li>
-          <li><a href="/contact-page.html">Contact</a></li>
-        </ul>
-        <ul class="footer-social-media-links">
-          <li><a target = "_blank" href="https://www.facebook.com/austin.tarrach"><img class="facebook-link" src="/Icons/Facebook_Logo_2023.png" alt="Facebook Logo"></a></li>
-          <li><a target = "_blank" href="https://www.instagram.com/austintarrach/"><img class="instagram-link" src="/Icons/Instagram_icon.png" alt="Instagram Logo"></a></li>
-          <li><a target = "_blank" href="https://www.linkedin.com/in/austin-tarrach/"><img class="linkedin-link" src="/Icons/linkedin_icon.png" alt="LinkedIn Logo"></a></li>
-          <li><a target = "_blank" href="https://github.com/kingTarrach"><img class="github-link" src="/Icons/github-icon.png" alt="GitHub Logo"></a></li>
-        </ul>
-      
-    </nav>
-    <div class="true-center">
-      <p>Copyright © Austin's Blog</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <%- include('partials/footer') %>
   
   <script src="/scripts/client.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

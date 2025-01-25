@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the webpage -->
+    <title>Portfolio</title>
+
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Brief description of the blog post that will show up in search engine results.">
+
+    <!-- Linking CSS stylesheets -->
+    <link rel="stylesheet" href="/Styles/blog_post.css">
+    <link rel="stylesheet" href="/Styles/new_homepage.css">
+    <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="/Styles/comments.css">
+
+    <!-- Linking JavaScript files -->
+    <script defer src="/Scripts/client.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <%- include('partials/navbar') %>
+    <!-- Main content -->
+    <div class="screen" id="top-screen">
+      <div class="top-page-main-content top-text">
+        <p class="subtitle">Hello! My name is</p>
+        <h1 class="title small-mobile-text">Austin Tarrach</h1>
+        <p class="subtitle">This is a collection of my projects and work experience.</p>
+        <a href="https://drive.google.com/file/d/18f3MVKuLARHOeU5bbeAL-Ptz2Dzz5aA2/view?usp=sharing" target="_blank" class="link-button" download>
+          My Resume
+        </a>
+      </div>
+    </div>
+    <div class="screen" id="about-screen">
+      <div class="flex-direction-switch about-page-main-content">
+        <div class="my-picture-half">
+          <img src="Images/professional_photo.png" alt="Professional Photo" class="professional_photo">
+        </div>
+        <div class="about-me-half">
+          <h1 class="title small-mobile-text">About me</h1>
+          <p class="subtitle">I am Austin Tarrach, a senior Computer Science student at Washington State University with a passion for technology and an eagerness to bring innovative products to life. As I embark on my professional journey, I am excited to leverage my skills to optimize product development, ensuring efficiency, quality, and responsiveness to market needs.<br><br>
+          Beyond my technical expertise, I've honed strong interpersonal skills, including effective communication, determination, coachability, and a drive to learn. Most importantly, I am committed to using technology to create meaningful, impactful work that brings people together and fosters a more inclusive, equitable, and sustainable world.</p>
+        </div>
+      </div>
+    </div>
+    <div class="screen" id="skills-screen">
+      <h1 class="skills-title small-mobile-text">Technologies</h1>
+      <div class="skills-grid">
+        <div class="skill">
+          <img src="Images/HTML5-logo.png" alt="HTML5 Logo" class="skill-logo">
+          <p class="skill-name">HTML5</p>
+        </div>
+        <div class="skill">
+          <img src="Images/CSS3-logo.png" alt="CSS3 Logo" class="skill-logo">
+          <p class="skill-name">CSS3</p>
+        </div>
+        <div class="skill">
+          <img src="Images/javascript-logo.png" alt="JavaScript Logo" class="skill-logo">
+          <p class="skill-name">JavaScript</p>
+        </div>
+        <div class="skill">
+          <img src="Images/ejs-logo.png" alt="EJS Logo" class="skill-logo">
+          <p class="skill-name">EJS</p>
+        </div>
+        <div class="skill">
+          <img src="Images/mongodb-logo.png" alt="MongoDB Logo" class="skill-logo">
+          <p class="skill-name">Mongo</p>
+        </div>
+        <div class="skill">
+          <img src="Images/express-logo.png" alt="Express Logo" class="skill-logo">
+          <p class="skill-name">Express</p>
+        </div>
+        <div class="skill">
+          <img src="Images/python-logo.png" alt="Python Logo" class="skill-logo">
+          <p class="skill-name">Python</p>
+        </div>
+        <div class="skill">
+          <img src="Images/C-logo.png" alt="C Logo" class="skill-logo">
+          <p class="skill-name">C</p>
+        </div>
+        <div class="skill">
+          <img src="Images/Cpp-logo.png" alt="C++ Logo" class="skill-logo">
+          <p class="skill-name">C++</p>
+        </div>
+        <div class="skill">
+          <img src="Images/Csharp-logo.png" alt="C# Logo" class="skill-logo">
+          <p class="skill-name">C#</p>
+        </div>
+        <div class="skill">
+          <img src="Images/java-logo.png" alt="Java Logo" class="skill-logo">
+          <p class="skill-name">Java</p>
+        </div>
+        <div class="skill">
+          <img src="Images/mysql-logo.png" alt="MySQL Logo" class="skill-logo">
+          <p class="skill-name">MySQL</p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="screen" id="project-screen">
+      <h1 class="projects-title small-mobile-text">My Projects</h1>
+      <div class="projects-container">
+        <div class="flex-direction-switch project">
+          <div class="image-third">
+            <img src="Images/blog-image.jpg" alt="Blog Photo">
+          </div>
+          <div class="description-third">
+            <h2 class="project-title">Blog Website</h2>
+            <p class="project-subtitle">My blog website offers insightful articles and discussions on a variety of topics, providing readers with valuable information, tips, and personal reflections on key areas of interest.</p>
+          </div>
+          <div class="buttons-third">
+            <div class="code-button-container">
+              <a href="https://github.com/kingTarrach/personal-website" target="_blank" class="project-button">
+                Code
+              </a>
+            </div>
+            <div class="demo-button-container">
+              <a href="/blog_homepage" class="project-button">
+                Explore
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-switch project">
+          <div class="image-third">
+            <img src="Images/receipt-scanner-image.jpg" alt="Reciept Scanner Photo" class="reciept-scanner-image">
+          </div>
+          <div class="description-third">
+            <h2 class="project-title">Reciept Scanner Application</h2>
+            <p class="project-subtitle">This application allows users to capture and store receipts by scanning them with their device and split the cost among friends, making it easier to track shared expenses.</p>
+          </div>
+          <div class="buttons-third">
+            <div class="code-button-container">
+              <a href="https://github.com/kingTarrach/Receipt_Reader" target="_blank" class="project-button">
+                Code
+              </a>
+            </div>
+            <div class="demo-button-container">
+              <a href="https://github.com/kingTarrach/Receipt_Reader" target="_blank" class="project-button">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-switch project">
+          <div class="image-third">
+            <img src="Images/magic-cards-image.jpg" alt="Magic The Gathering Cards Photo" class="magic-cards-image">
+          </div>
+          <div class="description-third">
+            <h2 class="project-title">TCG Cart Optimizer Application</h2>
+            <p class="project-subtitle"> This application helps users find the best deals and bundles for their selected trading cards by searching across various dealers, ensuring they get the best prices available.</p>
+          </div>
+          <div class="buttons-third">
+            <div class="code-button-container">
+              <a href="https://github.com/shickmanIV/tcg-cart-optimizer" target="_blank" class="project-button">
+                Code
+              </a>
+            </div>
+            <div class="demo-button-container">
+              <a href="https://github.com/shickmanIV/tcg-cart-optimizer" target="_blank" class="project-button">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-switch project">
+          <div class="image-third">
+            <img src="Images/stock-market-bar-image.webp" alt="Stock Market Bar Photo" class="stock-market-bar-image">
+          </div>
+          <div class="description-third">
+            <h2 class="project-title">Stock Market Bar Application</h2>
+            <p class="project-subtitle">This application manages drink prices dynamically, treating them like stocks. Prices increase or decrease based on drink popularity, creating a fun and engaging bar experience.</p>
+          </div>
+          <div class="buttons-third">
+            <div class="code-button-container">
+              <a href="https://github.com/WSU-Software-Development-Club/stock-market-bar" target="_blank" class="project-button">
+                Code
+              </a>
+            </div>
+            <div class="demo-button-container">
+              <a href="https://github.com/WSU-Software-Development-Club/stock-market-bar" target="_blank" class="project-button">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-switch project">
+          <div class="image-third">
+            <img src="Images/chess-image.jpg" alt="Chess Photo">
+          </div>
+          <div class="description-third">
+            <h2 class="project-title">Chess Game</h2>
+            <p class="project-subtitle">Python-based chess game allows users to play chess with a fully functional board featuring standard gameplay mechanics.</p>
+          </div>
+          <div class="buttons-third">
+            <div class="code-button-container">
+              <a href="https://github.com/kingTarrach/Chess" target="_blank" class="project-button">
+                Code
+              </a>
+            </div>
+            <div class="demo-button-container">
+              <a href="https://github.com/kingTarrach/Chess" target="_blank" class="project-button">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-direction-switch project">
+          <div class="image-third">
+            <img src="Images/environment-image.jpg" alt="Environment Photo" class="environment-image">
+          </div>
+          <div class="description-third">
+            <h2 class="project-title">EcoTravel Insights</h2>
+            <p class="project-subtitle">This project analyzes environmental data from Google Earth Engine to identify travel patterns by correlating environmental factors with movement trends at specific locations and times.</p>
+          </div>
+          <div class="buttons-third">
+            <div class="code-button-container">
+              <a href="https://github.com/kingTarrach/TripEnv-Analyzer" target="_blank" class="project-button">
+                Code
+              </a>
+            </div>
+            <div class="demo-button-container">
+              <a href="https://github.com/kingTarrach/TripEnv-Analyzer" target="_blank" class="project-button">
+                Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="screen" id="contact-screen">
+      <h1 class="small-mobile-text">Contact Me</h1>
+      <p class="subtitle">Feel free to submit a message below or contact me directly with email: atarrach77@gmail.com</p>
+    <form action="/submit" method="POST" class="contact-form">
+        <input type="text" id="name" name="name" required placeholder="Name"><br><br>
+
+        <input type="email" id="email" name="email" required placeholder="Email"><br><br>
+
+        <textarea id="message" name="message" rows="6" required placeholder="Message"></textarea><br><br>
+
+        <button type="submit" class="contact-button">Let's connect!</button>
+    </form>
+    </div>
+
+  <%- include('partials/footer') %>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

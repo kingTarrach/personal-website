@@ -146,7 +146,7 @@ let likes = 0;
 let articles = [];
 
 app.get('/', (req, res) => {
-   res.render('austin_tarrach', { articles: articles });  // Render the 'articles' view with the articles data
+   res.render('homepage', { articles: articles });  // Render the 'articles' view with the articles data
 });
 
 app.get('/blog_homepage', async (req, res) => {

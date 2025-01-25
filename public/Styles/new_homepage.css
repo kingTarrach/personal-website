@@ -1,0 +1,403 @@
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.screen {
+    width: 100%;   /* Full width of the viewport */
+    display: flex; /* Center content inside each screen */
+    justify-content: start;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: rgb(44, 110, 191);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.screen h1 {
+    line-height: 1;
+    margin: 0px;
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.link-button {
+    margin-top: 100px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .link-button:hover {
+    color: white;
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+
+.top-page-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    padding: 0 0px;
+    margin-left: 20%;
+    text-align: start;
+}
+
+.professional_photo {
+      border-radius: 10px; /* Optional: Add rounded corners */
+      display: block; /* Optional: Center alignment adjustments */
+      margin: 0 auto; /* Optional: Center the image horizontally */
+      max-width: 100%; /* Optional: Set the maximum width */
+}
+
+.my-picture-half {
+    min-width: 47.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    padding: 0 0px;
+}
+
+.about-me-half {
+    min-width: 47.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 0 0px;
+    text-align: left;
+}
+
+.about-me-half p {
+    align-self: left;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 640px) {
+    #about-screen .flex-direction-switch {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.about-page-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1rem;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.screen .projects-title {
+    font-size: 75px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    color:#0056b3;
+}
+
+.screen .project-title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    color:#0056b3;
+}
+
+.screen .project-subtitle {
+    font-size: 14px;
+    text-align: left;
+    color:#0056b3;
+}
+
+.project-button {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-button:hover {
+    color: white;
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button *//
+}
+
+.project-button:active {
+    background-color: #0f22a0; /* Even darker green when clicked */
+    transform: scale(1); /* Return to original position when clicked */
+}
+
+.description-third {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex: 4;
+    overflow: hidden;
+}
+
+.image-third img {
+    height: 100%; /* Set the height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    display: block; /* Optional: Center alignment adjustments */
+    margin: 0 auto; /* Optional: Center the image horizontally */
+}
+
+.stock-market-bar-image {
+    margin-right: 10px;
+}
+
+.reciept-scanner-image {
+    margin-right: 10px;
+}
+
+.magic-cards-image {
+    margin-left: 20px;
+}
+
+.image-third {
+    flex: 2;
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.buttons-third {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between; /* Add space between the items */
+    height: 100%; /* Ensure the container takes up the full height of its parent */
+    gap: 10px;
+}
+
+.code-button-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.demo-button-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 755px) {
+    #project-screen .flex-direction-switch {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 480px;
+        width: 270px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    height: 200px;
+    padding: 20px;
+    margin: auto;
+    gap: 20px;
+    border-width: 2px;
+    border-color:#0f22a0;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.projects-container {
+    display: grid; /* Using grid layout */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between grid items */
+    margin: 0 10% 0 10%; /* Center the grid container if needed */
+    width: 75%; /* Full width of the parent element */
+    padding: 0 10px; /* Padding inside the container */
+}
+
+#skills-screen .skills-title {
+    text-align: center;
+    font-size: 75px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    color:#0056b3;
+}
+
+@media (max-width: 640px) {
+    #skills-screen .skills-title {
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+.skill-logo {
+    display: block; /* Optional: Center alignment adjustments */
+    margin-left: auto;
+    margin-right: auto;
+    height: auto; /* Set the height */
+    max-width: 100%;
+    max-height: 100px; /* Optional: Set the maximum height */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    border-color:#0f22a0;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: #b5dbfb;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    #skills-screen .skills-grid {
+        grid-template-columns: repeat(4, 1fr); /* Two columns of equal width */
+    }
+}
+
+.skills-grid {
+    display: grid; /* Using grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Four columns of equal width */
+    gap: 1rem; /* Space between grid items */
+    margin: auto auto; /* Center the grid container if needed */
+    width: 100%; /* Full width of the parent element */
+    padding: 0 10px; /* Padding inside the container */
+    max-width: 1000px;
+}
+
+.contact-button {
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-button:hover {
+    color: white;
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.contact-form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 500px;
+}
+
+
+@media (max-width: 640px) {
+    .screen .small-mobile-text {
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    #top-screen .top-text {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+}
+  
+#top-screen { 
+    background-color: #b5dbfb; 
+    padding-bottom: 200px;
+}
+#about-screen { 
+    display: flex;
+    justify-content: center;
+    background-color: #b5f2f7; 
+}
+#project-screen { 
+    display: flex;
+    flex-direction: column;
+    background-color: #b7cffc; 
+    padding-left: auto;
+    padding-right: auto;
+}
+#skills-screen { 
+    display: flex;
+    flex-direction: column;
+    background-color: #c3e7fe; 
+    padding-left: auto;
+    padding-right: auto;
+ }
+#contact-screen { 
+    display: flex;
+    flex-direction: column;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: #b3c2f2; 
+}

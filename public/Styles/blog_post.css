@@ -74,7 +74,7 @@
   .centered-content {
     display: flex;
     justify-content: center;
-    text-align: center;  /* Centers text */
+    text-align: start;  /* Centers text */
     flex-direction: column;
     padding-left: 8%;
     flex: 1;

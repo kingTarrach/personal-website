@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/Styles/austin_tarrach_navbar.css">
     <link rel="stylesheet" href="/Styles/main.css">
     <link rel="stylesheet" href="/Styles/register.css">
+    <link rel="stylesheet" href="/Styles/add_article.css">
 
     <!-- Linking JavaScript files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,14 +35,20 @@
         <p style="color: green;"><%= success_msg %></p>
       <% } %>
       <form action="/admin/add-article" method="POST">
-        <div class="register-box">
+        <div class="add-article-box">
           <p class="above-text">Title</p>
           <input class="textbox" type="title" id="title" name="title" placeholder="Enter Here" required>
-          <p class="above-text">Password</p>
-          <textarea class="textbox" type="content" id="content" name="content" placeholder="Enter Here" required></textarea>
+          <p class="above-text">Content</p>
+          <textarea class="add-article-textbox" type="content" id="content" name="content" oninput="adjustHeight(this)" placeholder="Enter Here" rows="11" required></textarea>
           <button type="submit" class="login-button">Add Article</button>
         </div>
       </form>
+      <script>
+        function adjustHeight(textarea) {
+            textarea.style.height = "auto"; // Reset height
+            textarea.style.height = textarea.scrollHeight + "px"; // Set to content height
+        }
+        </script>
 
       <%- include('partials/footer') %>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

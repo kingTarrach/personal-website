@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Express session
 app.use(session({
-  secret: 'big14bitchyea', // This is a secret key to sign the session ID cookie.
+  secret: 'randomPassword##2024', // This is a secret key to sign the session ID cookie.
   resave: false, // Don't save session if unmodified
   saveUninitialized: false, // Don't create session until something stored
   cookie: { secure: false } // True is recommended if your site is HTTPS only
@@ -58,7 +58,7 @@ app.use('/', articleRoutes);
 app.use('/data', dataRoutes);
 
 // Connect to mongo database
-MONGO_URI = process.env.MONGODB_URI
+MONGO_URI = process.env.MONGODB_URI || "mongodb+srv://atarrach77:dataTypeShit1@personal-website-cluste.gt5e7.mongodb.net/?retryWrites=true&w=majority&appName=personal-website-cluster";
 mongoose.connect(MONGO_URI)
 .then(() => console.log('MongoDB connected successfully'))
 .catch(err => console.error('MongoDB connection error:', err)); 
@@ -83,7 +83,7 @@ db.once('open', function() {
 
 // Following implementation is to be able to add an article
 const ADMIN_USERNAME = 'austindeantarrach';
-const ADMIN_PASSWORD = 'big14bitchyea';
+const ADMIN_PASSWORD = 'randomPassword##2024';
 
 // 1. This renders the admin login page
 app.get('/admin/login', (req, res) => {

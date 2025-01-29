@@ -13,6 +13,10 @@ const BlogPost = require('./models/blogPost');
 const Comment = require('./models/comments');
 const app = express();
 
+// Following implementation is to be able to add an article
+const ADMIN_USERNAME = 'austindeantarrach';
+const ADMIN_PASSWORD = 'randomPassword##2024';
+
 require('./config/passport')(passport);
 
 const articleRoutes = require('./routes/articles');
@@ -81,9 +85,7 @@ db.once('open', function() {
 })
 
 
-// Following implementation is to be able to add an article
-const ADMIN_USERNAME = 'austindeantarrach';
-const ADMIN_PASSWORD = 'randomPassword##2024';
+
 
 // 1. This renders the admin login page
 app.get('/admin/login', (req, res) => {

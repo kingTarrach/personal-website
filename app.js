@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const connectDB = require('./config/database');
 const BlogPost = require('./models/blogPost');
 const Comment = require('./models/comments');
+const Contact = require('./models/contact');
 const app = express();
 
 // Following implementation is to be able to add an article
@@ -22,6 +23,7 @@ require('./config/passport')(passport);
 const articleRoutes = require('./routes/articles');
 const userRoutes = require('./routes/users');
 const dataRoutes = require('./routes/data');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -202,7 +204,27 @@ app.post('/blog_post/:postId', (req, res) => {
   .catch(err => res.status(500).send('Server error.'));
 });
 
+// POST route to handle form submission
+app.post('/submit-contact', async (req, res) => {
+  // Extract form data from the request body
+  const { name, email, message } = req.body;
+  console.log('Contact Form Submission:');
+  console.log(`Name: ${name}`);
+  console.log(`Email: ${email}`);
+  console.log(`Message: ${message}`);
 
+  try {
+    // Save the form data to MongoDB
+    const newContact = new Contact({ name, email, message });
+    await newContact.save();
+    // Redirect the user to the thank-you page after submission
+    res.redirect('/thank-you.html');
+  } catch (error) {
+    console.error('Error saving submission:', error);
+    res.status(500).send('An error occurred while processing your submission.');
+  }
+
+});
 
 app.get('/articles', async (req, res) => {
   let page = parseInt(req.query.page) || 1; // Get the page number, default is 1

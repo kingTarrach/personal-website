@@ -1,0 +1,61 @@
+/* thank-you.css */
+
+/* Apply a basic reset and use a clean font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    /* Use flexbox to center content both vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;  /* Light grey background */
+  }
+  
+  /* Container for the thank you message */
+  .container {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the heading */
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the paragraph */
+  p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the button to be big and flashy */
+  button {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff4081, #7c4dff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Button hover effects */
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+  }
+  

@@ -127,6 +127,11 @@ body {
     text-align: start;
 }
 
+.scroll-down {
+    margin-top: 50px;
+    width: 100px;
+}
+
 .professional_photo {
       border-radius: 10px; /* Optional: Add rounded corners */
       display: block; /* Optional: Center alignment adjustments */

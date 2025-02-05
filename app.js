@@ -238,7 +238,10 @@ app.get('/articles', async (req, res) => {
     // Fetch total number of articles
     const totalArticles = await BlogPost.countDocuments();
     // Fetch articles for the current page
-    const paginatedArticles = await BlogPost.find().skip(offset).limit(limit);
+    const paginatedArticles = await BlogPost.find()
+      .sort({ date: -1 }) // Sort by newest first
+      .skip(offset)
+      .limit(limit);
 
     console.log("Number of articles on the current page:", paginatedArticles.length); // Logs how many articles are on the current page
 

@@ -32,6 +32,68 @@ html {
     margin-bottom: 0px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Sidebar container */
+  .sidebar {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+  }
+
+  /* Sidebar link */
+  .sidebar-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 2px;
+    width: 56px; /* Initial width for icon only */
+    transition: width 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .github-item {
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .sidebar-item img {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+
+  .sidebar-item span {
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  /* Hover effect */
+  .sidebar-item:hover {
+    width: 200px; /* Expanded width */
+  }
+
+  .sidebar-item:hover span {
+    opacity: 1;
+  }
+
+  @media (max-width: 1200px) {
+    .sidebar {
+      display: none;
+    }
+  }
+
 .link-button {
     margin-top: 100px;
     display: inline-block;
@@ -374,7 +436,7 @@ html {
 }
   
 #top-screen { 
-    background-color: #c4e2fa; 
+    background-color: #ace7f9; 
     padding-bottom: 200px;
 }
 #about-screen { 

@@ -27,23 +27,13 @@
   <%- include('partials/navbar') %>
   <%- include('partials/sidebar_homepage') %>
     <!-- Main content -->
-    <div class="screen" id="top-screen">
-      <div class="top-page-main-content top-text">
-        <p class="subtitle">Hello! My name is</p>
-        <h1 class="title small-mobile-text">Austin Tarrach</h1>
-        <p class="subtitle">This is a collection of my projects and relevant skills. Feel free to explore as long as you
-          would like! If you have any questions or would like to connect, please don't hesitate to reach out. I look forward to hearing from you!
-        </p>
-        <a href="https://drive.google.com/file/d/1e2xHvySujWlV-c1B5i67ajoFwqy66ztu/view?usp=sharing" target="_blank" class="link-button" download>
-          My Resume
-        </a>
-        <img src="Images/scroll_down.png" alt="Scroll Down" class="scroll-down">
-      </div>
-    </div>
     <div class="screen" id="about-screen">
       <div class="flex-direction-switch about-page-main-content">
         <div class="my-picture-half">
           <img src="Images/professional_photo.png" alt="Professional Photo" class="professional_photo">
+          <a href="https://drive.google.com/file/d/1e2xHvySujWlV-c1B5i67ajoFwqy66ztu/view?usp=sharing" target="_blank" class="link-button" download>
+            My Resume
+          </a>
         </div>
         <div class="about-me-half">
           <h1 class="title small-mobile-text">About me</h1>
@@ -239,7 +229,7 @@
 
     </div>
     <div class="screen" id="contact-screen">
-      <h1 class="small-mobile-text">Contact Me</h1>
+      <h1 class="small-mobile-text">Let's connect!</h1>
       <p class="subtitle">Feel free to submit a message below or contact me directly with email: atarrach77@gmail.com</p>
     <form action="/submit-contact" method="POST" class="contact-form">
         <input type="text" id="name" name="name" required placeholder="Name"><br><br>
